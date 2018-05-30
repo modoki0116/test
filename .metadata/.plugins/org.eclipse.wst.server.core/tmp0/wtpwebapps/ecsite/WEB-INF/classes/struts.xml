@@ -78,5 +78,11 @@
       <result name="error">home.jsp</result>
     </action>
 
+    <!-- UserDeleteAction -->
+    <action name="UserDeleteAction" class="com.internousdev.ecsite.action.UserDeleteAction" method="execute">
+      <result name="success">userDelete.jsp</result>
+      <result name="error">error.jsp</result>
+    </action>
+
   </package>
 </struts>

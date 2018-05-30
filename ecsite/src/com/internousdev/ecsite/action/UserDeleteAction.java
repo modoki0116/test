@@ -11,15 +11,18 @@ public class UserDeleteAction extends ActionSupport{
 
 	private ArrayList<UserDeleteDTO> userList=new ArrayList<UserDeleteDTO>();
 	private UserDeleteDAO userDAO=new UserDeleteDAO();
-	private String deleteFlg;
+	private ArrayList<String> checkList=new ArrayList<String>();
+	private String check=null;
 
 	public String execute() throws SQLException{
 
-		if(deleteFlg==null){
-			userList=userDAO.getUserInfo();
-		}else if(deleteFlg.equals("1")){
-			while()
+		while(check != null){
+			checkList.add(check);
+			check=null;
 		}
+
+		while()
+
 		return SUCCESS;
 
 	}
