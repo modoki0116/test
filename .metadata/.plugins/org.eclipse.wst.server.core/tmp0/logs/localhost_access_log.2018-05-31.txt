@@ -31,3 +31,8 @@
 0:0:0:0:0:0:0:1 - - [31/May/2018:14:20:47 +0900] "POST /ecsite/UserDeleteAction.action HTTP/1.1" 200 3720
 0:0:0:0:0:0:0:1 - - [31/May/2018:14:21:47 +0900] "POST /ecsite/UserDeleteAction.action HTTP/1.1" 200 3729
 0:0:0:0:0:0:0:1 - - [31/May/2018:14:25:02 +0900] "POST /ecsite/UserDeleteAction.action HTTP/1.1" 200 2886
+127.0.0.1 - - [31/May/2018:14:41:19 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [31/May/2018:14:41:21 +0900] "GET /ecsite/ HTTP/1.1" 200 2289
+0:0:0:0:0:0:0:1 - - [31/May/2018:14:41:22 +0900] "POST /ecsite/AdHomeAction.action HTTP/1.1" 200 2195
+0:0:0:0:0:0:0:1 - - [31/May/2018:14:41:30 +0900] "POST /ecsite/AdLoginAction.action HTTP/1.1" 200 3063
+0:0:0:0:0:0:0:1 - - [31/May/2018:14:41:32 +0900] "POST /ecsite/UserDeleteAction.action HTTP/1.1" 200 2696
