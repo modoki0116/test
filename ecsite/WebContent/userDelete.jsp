@@ -89,20 +89,23 @@
           <th>insert_date</th>
           <th>updated_date</th>
         </tr>
+
         <s:iterator value="userList">
-        <input type="hidden" name="check" value="0">
-        <s:checkbox name="check" value="1">
+
         <tr>
-          <td><s:property value="id"/></td>
+          <td><a href='<s:url action="UserDeleteAction" method="delete"/>'><s:property value="id"/></a></td>
           <td><s:property value="login_id"/></td>
           <td><s:property value="login_pass"/></td>
           <td><s:property value="user_name"/></td>
           <td><s:property value="insert_date"/></td>
           <td><s:property value="updated_date"/></td>
         </tr>
-        </s:checkbox>
+
         </s:iterator>
+
       </table>
+
+
 
 
     <div id="text-right">
