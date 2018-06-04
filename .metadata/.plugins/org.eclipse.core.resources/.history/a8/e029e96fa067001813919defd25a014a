@@ -95,7 +95,7 @@
         <s:iterator value="userList">
 
         <tr>
-          <td><input type="checkbox" name="del[]" value='<s:property value="id"/>'></td>
+          <td><input type="checkbox" name="del" value='"id"'></td>
           <td><s:property value="id"/></td>
           <td><s:property value="login_id"/></td>
           <td><s:property value="login_pass"/></td>

@@ -82,27 +82,26 @@
 
       <table border="1">
         <tr>
-          <th>check</th>
           <th>id</th>
           <th>login_id</th>
           <th>login_pass</th>
           <th>user_name</th>
           <th>insert_date</th>
           <th>updated_date</th>
-
+          <th>check</th>
         </tr>
 
         <s:iterator value="userList">
 
         <tr>
-          <td><input type="checkbox" name="del[]" value='<s:property value="id"/>'></td>
+          <s:checkbox name="del" value='"id"'>
           <td><s:property value="id"/></td>
           <td><s:property value="login_id"/></td>
           <td><s:property value="login_pass"/></td>
           <td><s:property value="user_name"/></td>
           <td><s:property value="insert_date"/></td>
           <td><s:property value="updated_date"/></td>
-
+          <td></s:checkbox></td>
         </tr>
 
         </s:iterator>
