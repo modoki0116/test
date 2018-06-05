@@ -80,6 +80,7 @@
     </div>
     <div>
 
+      <s:form action="UserDeleteAction">
       <table border="1">
         <tr>
           <th>check</th>
@@ -92,16 +93,16 @@
 
         </tr>
 
-        <s:iterator value="userList">
+        <s:iterator value="userList" status="rs">
 
         <tr>
-          <td><input type="checkbox" name="del[]" value='<s:property value="id"/>'></td>
+          <td><input type="checkbox" name="deleteList" value="userList.get(rs.)"></td>
           <td><s:property value="id"/></td>
-          <td><s:property value="login_id"/></td>
-          <td><s:property value="login_pass"/></td>
-          <td><s:property value="user_name"/></td>
-          <td><s:property value="insert_date"/></td>
-          <td><s:property value="updated_date"/></td>
+          <td><s:property value="loginId"/></td>
+          <td><s:property value="loginPass"/></td>
+          <td><s:property value="userName"/></td>
+          <td><s:property value="insertDate"/></td>
+          <td><s:property value="updatedDate"/></td>
 
         </tr>
 
@@ -113,10 +114,11 @@
 
 
     <div id="text-right">
-      <s:submit action="UserDeleteAction" value="削除" method="delete"/>
+      <s:submit value="削除" method="delete"/>
       <p><a href='<s:url action="GoHomeAction"/>'>Home</a></p>
 
     </div>
+    </s:form>
     </div>
   </div>
 
