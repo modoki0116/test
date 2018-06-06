@@ -43,16 +43,19 @@ public class UserDeleteDAO {
 		return userDeleteDTO;
 	}
 
-	public int userDelete(String loginId) throws SQLException{
+	public int userDelete(String[] deleteList) throws SQLException{
 
 		String sql="DELETE FROM login_user_transaction WHERE login_id=?";
 		int result=0;
 
 		try{
-			PreparedStatement ps=con.prepareStatement(sql);
-			ps.setString(1,loginId);
+			for(int i=0;i<deleteList.length;i++){
+				String loginId=deleteList[i];
+			    PreparedStatement ps=con.prepareStatement(sql);
+			    ps.setString(1,loginId);
 
-			result=ps.executeUpdate();
+			    result=ps.executeUpdate();
+			}
 		}
 		catch(SQLException e){
 			e.printStackTrace();

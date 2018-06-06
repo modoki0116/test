@@ -96,7 +96,7 @@
         <s:iterator value="userList" status="rs">
 
         <tr>
-          <td><input type="checkbox" name="deleteList" value="userList.get(rs.)"></td>
+          <td><input type="checkbox" name="deleteList" value='<s:property value="loginId"/>'></td>
           <td><s:property value="id"/></td>
           <td><s:property value="loginId"/></td>
           <td><s:property value="loginPass"/></td>
@@ -114,7 +114,9 @@
 
 
     <div id="text-right">
+      <input type="hidden" name="deleteFlg" value="1">
       <s:submit value="削除" method="delete"/>
+      <p><a href='<s:url action="GoAdHomeAction"/>'>戻る</a>
       <p><a href='<s:url action="GoHomeAction"/>'>Home</a></p>
 
     </div>

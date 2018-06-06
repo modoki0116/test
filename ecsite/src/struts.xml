@@ -81,7 +81,12 @@
     <!-- UserDeleteAction -->
     <action name="UserDeleteAction" class="com.internousdev.ecsite.action.UserDeleteAction" method="execute">
       <result name="success">userDelete.jsp</result>
-      <result name="error">error.jsp</result>
+      <result name="complete">userDeleteComplete.jsp</result>
+    </action>
+
+    <!-- GoAdHomeAction -->
+    <action name="GoAdHomeAction" class="com.internousdev.ecsite.action.GoAdHomeAction" method="execute">
+      <result name="success">adHome.jsp</result>
     </action>
 
 

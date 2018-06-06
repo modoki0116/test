@@ -2,7 +2,6 @@ package com.internousdev.ecsite.action;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
 
 import com.internousdev.ecsite.dao.UserDeleteDAO;
 import com.internousdev.ecsite.dto.UserDeleteDTO;
@@ -10,24 +9,32 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class UserDeleteAction extends ActionSupport{
 
-	private List<String> deleteList=new ArrayList<String>();
+	private String[] deleteList;
 	private ArrayList<UserDeleteDTO> userList=new ArrayList<UserDeleteDTO>();
 	private UserDeleteDAO userDAO=new UserDeleteDAO();
+	private String deleteFlg;
 
 
 	public String execute() throws SQLException{
 
-		userList=userDAO.getUserInfo();
-		return SUCCESS;
-		
+		String result=SUCCESS;
+
+		if(deleteFlg==null){
+		    userList=userDAO.getUserInfo();
+		}else if(deleteFlg.equals("1")){
+			delete();
+			deleteFlg=null;
+			result="complete";
+		}
+		return result;
+
 
 	}
 
 	public void delete() throws SQLException{
 
-		for(int i=0;i<deleteList.size()-1;i++){
-			userDAO.userDelete(deleteList.get(i));
-		}
+		userDAO.userDelete(deleteList);
+
 
 		deleteList=null;
 	}
@@ -40,12 +47,19 @@ public class UserDeleteAction extends ActionSupport{
 		this.userList=userList;
 	}
 
-	public List<String> getDeleteList(){
+
+	public String[] getDeleteList(){
 		return deleteList;
 	}
-	public void setDeleteList(List<String> deleteList){
+	public void setDeleteList(String[] deleteList){
 		this.deleteList=deleteList;
 	}
 
+	public String getDeleteFlg(){
+		return deleteFlg;
+	}
+	public void setDeleteFlg(String deleteFlg){
+		this.deleteFlg=deleteFlg;
+	}
 
 }
