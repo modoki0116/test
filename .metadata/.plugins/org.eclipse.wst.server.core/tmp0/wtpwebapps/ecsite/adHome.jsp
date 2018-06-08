@@ -82,13 +82,13 @@
         <s:form action="UserDeleteAction">
         <s:submit value="ユーザー削除"/>
         </s:form>
-        <s:form action="MerchandiseAddAction">
+        <s:form action="ItemAddAction">
         <s:submit value="商品追加"/>
         </s:form>
-        <s:form action="MerchandiseDeleteAction">
+        <s:form action="ItemDeleteAction">
         <s:submit value="商品削除"/>
         </s:form>
-        <s:form action="MerchandiseUpdateAction">
+        <s:form action="ItemUpdateAction">
         <s:submit value="商品更新"/>
         </s:form>
           <p><a href='<s:url action="GoHomeAction"/>'>Home</a></p>
