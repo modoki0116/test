@@ -21,7 +21,6 @@ public class HomeAction extends ActionSupport implements SessionAware{
 		String result="login";
 		if(session.containsKey("id")){
 			buyItemList=buyItemListDAO.getItemInfo();
-			session.remove("id");
 			session.remove("buyItem_name");
 			session.remove("buyItem_price");
 			result=SUCCESS;

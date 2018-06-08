@@ -94,11 +94,15 @@
         <tr>
 
           <td><s:property value="id"/></td>
-          <td><a href='<s:url action="BuyItemListAction"/>?
-          id=<s:property value="id"/>&
-          buyItem_name=<s:property value="itemName"/>&
-          buyItem_price=<s:property value="itemPrice"/>'>
-          <s:property value="itemName"/></a></td>
+          <td>
+          <a href='<s:url action="BuyItemListAction">
+          <s:param name="dto.id"><s:property value="id"/></s:param>
+          <s:param name="dto.itemName"><s:property value="itemName"/></s:param>
+          <s:param name="dto.itemPrice"><s:property value="itemPrice"/></s:param>
+          </s:url>'>
+          <s:property value="itemName"/>
+          </a>
+          </td>
           <td><s:property value="itemPrice"/></td>
 
         </tr>
