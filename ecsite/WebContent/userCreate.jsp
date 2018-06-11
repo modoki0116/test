@@ -74,7 +74,7 @@
       <p>UserCreate</p>
     </div>
     <div>
-      <s:if test="errorMessage !=">
+      <s:if test="errorMessage != null">
         <s:property value="errorMessage" escape="false"/>
       </s:if>
         <table>

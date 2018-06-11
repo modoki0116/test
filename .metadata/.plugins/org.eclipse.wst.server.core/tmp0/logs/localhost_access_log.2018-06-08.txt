@@ -110,3 +110,14 @@
 0:0:0:0:0:0:0:1 - - [08/Jun/2018:17:06:44 +0900] "GET /ecsite/MyPageAction.action HTTP/1.1" 200 3008
 0:0:0:0:0:0:0:1 - - [08/Jun/2018:17:06:51 +0900] "POST /ecsite/MyPageAction.action HTTP/1.1" 200 2004
 0:0:0:0:0:0:0:1 - - [08/Jun/2018:17:08:37 +0900] "GET /ecsite/GoHomeAction.action HTTP/1.1" 200 2412
+127.0.0.1 - - [08/Jun/2018:17:30:18 +0900] "GET / HTTP/1.1" 404 1019
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:17:30:20 +0900] "GET /ecsite/ HTTP/1.1" 200 2412
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:17:30:23 +0900] "POST /ecsite/HomeAction.action HTTP/1.1" 200 2761
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:17:32:40 +0900] "GET /ecsite/BuyItemListAction.action?dto.id=2&dto.itemName=%E9%89%9B%E7%AD%86&dto.itemPrice=50 HTTP/1.1" 200 3324
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:17:42:57 +0900] "GET /ecsite/HomeAction.action HTTP/1.1" 200 2761
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:17:42:59 +0900] "GET /ecsite/GoHomeAction.action HTTP/1.1" 200 2412
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:17:53:44 +0900] "POST /ecsite/HomeAction.action HTTP/1.1" 200 2761
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:17:53:46 +0900] "GET /ecsite/BuyItemListAction.action?dto.id=1&dto.itemName=%E3%83%8E%E3%83%BC%E3%83%88Book&dto.itemPrice=100 HTTP/1.1" 200 3332
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:17:53:47 +0900] "POST /ecsite/BuyItemAction.action HTTP/1.1" 200 2931
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:17:53:48 +0900] "POST /ecsite/BuyItemConfirmAction HTTP/1.1" 200 1882
+0:0:0:0:0:0:0:1 - - [08/Jun/2018:17:53:50 +0900] "GET /ecsite/MyPageAction.action HTTP/1.1" 200 2778
