@@ -24,7 +24,7 @@ public class ItemDeleteDAO {
 
 			while(rs.next()){
 				ItemOperateDTO dto=new ItemOperateDTO();
-				dto.setId(rs.getString("id"));
+				dto.setId(rs.getInt("id"));
 				dto.setItemName(rs.getString("item_name"));
 				dto.setItemPrice(rs.getString("item_price"));
 				dto.setItemStock(rs.getString("item_stock"));
