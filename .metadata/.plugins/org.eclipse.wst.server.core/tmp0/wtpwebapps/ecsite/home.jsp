@@ -105,11 +105,11 @@
       </div>
       <div id="text-center">
         <div class="url-box-buy">
-          商品購入<br>
+          <h1>商品購入</h1><br>
           <a href='<s:url action="HomeAction"/>'><img src="./images/syouhin_tana.png" class="image-home"/></a>
         </div>
         <div class="url-box-admin">
-          Administrator<br>
+          <h1>Administrator</h1><br>
           <a href='<s:url action="AdHomeAction"/>'><img src="./images/book_open_yoko.png" class="image-home"/></a>
         </div>
         <s:if test="#session.id !=null">

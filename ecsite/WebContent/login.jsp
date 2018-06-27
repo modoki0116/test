@@ -64,7 +64,22 @@
     }
 
   </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript">
+
+  function chkForm(val){
+	  document.getElementById("user").style.backgroundColor="#FFFFFF";
+	  if(val==null){
+		  document.getElementById("user").style.backgroundColor="mistyrose";
+		  alert("未入力");
+	  }
+  }
+
+  </script>
+
 </head>
+
 <body>
 
   <div id="header">
@@ -79,8 +94,8 @@
     <div>
       <h3>商品を購入する際にはログインをお願いします。</h3>
       <s:form action="LoginAction">
-        <s:textfield name="loginUserId"/>
-        <s:password name="loginPassword"/>
+        <s:textfield name="loginUserId" id="user" onchange="chkForm(this.value)"/>
+        <s:password name="loginPassword" class="pass"/>
         <s:submit value="ログイン"/>
       </s:form>
       <br/>
