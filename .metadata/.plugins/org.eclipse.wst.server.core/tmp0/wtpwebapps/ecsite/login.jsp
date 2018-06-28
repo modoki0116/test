@@ -78,6 +78,16 @@
 
   $(function(){
 
+
+	  //"未入力"の表示と隠蔽
+
+	  if($("#user").val()!=""){
+		  $(".uerror").hide();
+	  }
+	  if($("#pass").val()!=""){
+		  $(".perror").hide();
+	  }
+
 	  $("#user").on("input",function(){
 		  if($(this).val()!=""){
 			  $(".uerror").hide();
@@ -94,13 +104,57 @@
 		  }
 	  })
 
+
+	  //submitボタンの有効・無効
+
 	  if($("#user").val()!="" && $("#pass").val()!=""){
 		  $(".submit").prop("disabled",false);
 	  }else{
 		  $(".submit").prop("disabled",true);
 	  }
-	  
-	  
+
+
+	  $("#user").on("input",function(){
+			  if($("#user").val()!="" && $("#pass").val()!=""){
+				  $(".submit").prop("disabled",false);
+			  }else{
+				  $(".submit").prop("disabled",true);
+			  }
+	  })
+
+	  $("#pass").on("input",function(){
+			  if($("#user").val()!="" && $("#pass").val()!=""){
+				  $(".submit").prop("disabled",false);
+			  }else{
+				  $(".submit").prop("disabled",true);
+			  }
+	  })
+
+
+	  //入力フォームの色
+
+	  $("#user").focusin(function(e){
+		  $(this).css("background-color","#ffc");
+	  })
+	  $("#user").focusout(function(e){
+		  if($(this).val()!=""){
+			  $(this).css("background-color","");
+		  }else{
+			  $(this).css("background-color","mistyrose");
+		  }
+	  })
+
+	  $("#pass").focusin(function(e){
+		  $(this).css("background-color","#ffc");
+	  })
+	  $("#pass").focusout(function(e){
+		  if($(this).val()!=""){
+			  $(this).css("background-color","");
+		  }else{
+			  $(this).css("background-color","mistyrose");
+		  }
+	  })
+
 
   })
 
@@ -127,14 +181,14 @@
 
         <div class="field">
 
-        <input type="text" name="loginUserId" id="user"/>
+        <input type="text" name="loginUserId" id="user" placeholder="ログインID"/>
         <label class="uerror">未入力</label>
 
         </div>
 
         <div class="field">
 
-        <input type="password" name="loginPassword" id="pass"/>
+        <input type="password" name="loginPassword" id="pass" placeholder="パスワード"/>
         <label class="perror">未入力</label>
 
         </div>

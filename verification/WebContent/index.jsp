@@ -11,11 +11,15 @@
 
 
 <s:form action="FormAction">
-  <s:hidden name="value" value="a"/>
-  <s:hidden name="value" value="b"/>
-  <s:hidden name="value" value="c"/>
-  <s:hidden name="value" value="d"/>
-  <s:submit value="送信"/>
+  <input type="text" name="num1"/>
+  <select name="math">
+  <option value="+" selected="selected">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  <input type="text" name="num2"/>
+  <s:submit value="計算"/>
 </s:form>
 
 
