@@ -63,18 +63,46 @@
       text-align:right;
     }
 
+    .field{
+      margin:10px;
+    }
+
+    .uerror,.perror{
+      color:red;
+    }
+
   </style>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script type="text/javascript">
 
-  function chkForm(val){
-	  document.getElementById("user").style.backgroundColor="#FFFFFF";
-	  if(val==null){
-		  document.getElementById("user").style.backgroundColor="mistyrose";
-		  alert("未入力");
+  $(function(){
+
+	  $("#user").on("input",function(){
+		  if($(this).val()!=""){
+			  $(".uerror").hide();
+		  }else{
+			  $(".uerror").show();
+		  }
+	  })
+
+	  $("#pass").on("input",function(){
+		  if($(this).val()!=""){
+			  $(".perror").hide();
+		  }else{
+			  $(".perror").show();
+		  }
+	  })
+
+	  if($("#user").val()!="" && $("#pass").val()!=""){
+		  $(".submit").prop("disabled",false);
+	  }else{
+		  $(".submit").prop("disabled",true);
 	  }
-  }
+	  
+	  
+
+  })
 
   </script>
 
@@ -94,9 +122,26 @@
     <div>
       <h3>商品を購入する際にはログインをお願いします。</h3>
       <s:form action="LoginAction">
-        <s:textfield name="loginUserId" id="user" onchange="chkForm(this.value)"/>
-        <s:password name="loginPassword" class="pass"/>
-        <s:submit value="ログイン"/>
+
+
+
+        <div class="field">
+
+        <input type="text" name="loginUserId" id="user"/>
+        <label class="uerror">未入力</label>
+
+        </div>
+
+        <div class="field">
+
+        <input type="password" name="loginPassword" id="pass"/>
+        <label class="perror">未入力</label>
+
+        </div>
+
+        <s:submit value="ログイン" class="submit"/>
+
+
       </s:form>
       <br/>
       <div id="text-link">

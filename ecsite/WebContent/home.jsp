@@ -88,6 +88,10 @@
       height:300px;
     }
 
+    .clear{
+      clear:both;
+    }
+
   </style>
 
   </head>
@@ -112,6 +116,7 @@
           <h1>Administrator</h1><br>
           <a href='<s:url action="AdHomeAction"/>'><img src="./images/book_open_yoko.png" class="image-home"/></a>
         </div>
+        <div class="clear"></div>
         <s:if test="#session.id !=null">
           <p>ログアウトする場合は
            <a href='<s:url action="LogoutAction"/>'>こちら</a></p>
