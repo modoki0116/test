@@ -10,17 +10,10 @@
 <body>
 
 
-<s:form action="FormAction">
-  <input type="text" name="num1"/>
-  <select name="math">
-  <option value="+" selected="selected">+</option>
-    <option value="-">-</option>
-    <option value="*">*</option>
-    <option value="/">/</option>
-  </select>
-  <input type="text" name="num2"/>
-  <s:submit value="計算"/>
-</s:form>
+<form method="post" action="FormAction.java" enctype="multipart/form-data">
+  <input type="file" name="myfile"/>
+  <input type="submit"/>
+</form>
 
 
 </body>

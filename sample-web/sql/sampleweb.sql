@@ -1,10 +1,10 @@
 set names utf8;
 set foreign_key_checks=0;
 
-drop database if exists sampleweb;
-create database if not exists sampleweb;
+drop database if exists sampleweb2;
+create database if not exists sampleweb2;
 
-use sampleweb;
+use sampleweb2;
 
 create table user_info(
 id int primary key not null auto_increment comment "ID",

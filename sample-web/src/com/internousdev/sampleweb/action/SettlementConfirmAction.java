@@ -35,8 +35,9 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 	private Map<String, Object> session;
 	public String execute() {
 		String result = ERROR;
+		System.out.println(session.get("logined"));
 
-		if(session.containsKey("loginId")) {
+		if(session.get("logined").toString().equals("1")) {
 			DestinationInfoDAO destinationInfoDAO = new DestinationInfoDAO();
 			List<DestinationInfoDTO> destinationInfoDtoList = new ArrayList<>();
 			try {
@@ -87,10 +88,10 @@ public class SettlementConfirmAction extends ActionSupport implements SessionAwa
 		}
 		session.put("purchaseHistoryInfoDtoList", purchaseHistoryInfoDtoList);
 
-		if(!session.containsKey("loginId")) {
-			result = ERROR;
-		}else {
+		if(session.get("logined").toString().equals("1")) {
 			result = SUCCESS;
+		}else {
+			result = ERROR;
 		}
 		return result;
 	}
